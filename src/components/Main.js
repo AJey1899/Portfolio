@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {AppBar, Drawer, Hidden, IconButton, List, ListItem, ListItemIcon, ListItemText,
-  TableContainer,Table,TableHead,TableRow,TableCell,TableBody, CardContent, CardActions,Button
+  TableContainer,Table,TableHead,TableRow,TableCell,TableBody, CardContent, CardActions,Button, Link
 } from '@material-ui/core';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -14,6 +14,7 @@ import { Card,CardMedia} from '@material-ui/core';
 import { Projects } from '../shared/projects.js';
 import {skills} from '../shared/skills.js';
 import NavLink from './NavLink';
+import { contacts } from '../shared/contact.js';
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -286,7 +287,7 @@ function Main() {
             <Grid container>
               {
                 skills.map((name) => (
-                  <Grid item xs={6} sm={4} md={3} gutterBottom>
+                  <Grid item xs={6} sm={4} md={3} gutterBottom mt={10}>
                     <img src={name} alt=""/>
                   </Grid>
                 ))
@@ -297,12 +298,18 @@ function Main() {
           <Typography id="contact" className={classes.heading} variant="h4">Contact</Typography>
           <Card className={classes.cardBg}>
             <Grid container>
-              {[1,2,3,4].map((i) =>(
+              {contacts.map((c) =>(
                 <Grid item xs={6} sm={4} md={3}>
-                  Icon {i}
+                  <IconButton href={c.link}>
+                  <img src={c.icon} alt=""/>
+                  </IconButton>
                 </Grid>
               ))}
             </Grid>
+          </Card>
+          <Typography className={classes.heading} variant="h4"></Typography>
+          <Card >
+            This site is developed by Ajey
           </Card>
         </main>
       </div>
