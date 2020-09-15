@@ -4,14 +4,14 @@ export const Experience = [
         title: 'Graphic Design Intern',
         location: 'Crossteps, Hyderabad.',
         time: 'April 2020 - Present',
-        description: 'Created designs, concepts for the workbook. Prepared illustrations of material, discussing them with client, and making necessary changes.'
+        description: 'Created designs, concepts for the workbook for children in Kindergarten. Prepared illustrations of material, discussing them with client, and making necessary changes.'
     },
     {
         no: 1,
         title: 'Product Animation',
         location: ' ',
         time: 'March 2020 – April 2020',
-        description: 'Utilized After Effects in making motion graphic animation for product design. Coordinate with the client to successfully create social media graphics suitable for target marketing.'
+        description: 'Utilized After Effects in making motion graphic animation for product design. Coordinate with the client to successfully create social media graphics for target marketing.'
     },
     {
         no: 2,

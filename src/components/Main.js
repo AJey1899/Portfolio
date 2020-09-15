@@ -280,7 +280,7 @@ function Main() {
 
             <Typography id="skills" className={classes.heading} style={{fontWeight: "bold" }} variant="h4">Skills</Typography>
             <Card className={classes.cardBg} >
-                  <Grid container spacing={2} justify="center" alignItems="center">
+                  <Grid container spacing={5} justify="center" alignItems="center">
                     
                       {skills.map((skl) =>(
                         <Grid item xs={6} sm={4} md={3} gutterBottom >
@@ -308,7 +308,7 @@ function Main() {
                         <Card  >
                           <CardContent align='center'>
                          
-                          <IconButton href={cnt.link}>
+                          <IconButton href={cnt.link} target ="_blank">
 
                           <img style={{height:'50px'}} src={cnt.icon} alt=""/>
                           
