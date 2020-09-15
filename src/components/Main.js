@@ -170,7 +170,7 @@ function Main() {
             <Card className={classes.cardBg} variant="outlined">
               <Grid container spacing={1} justify="center" alignItems="center">
                 <Grid item xs={12} sm={12} md={4} justify="center" alignItems="center" >
-                  <CardMedia className={classes.media} image="/img/profile2.png">
+                  <CardMedia className={classes.media} image="/img/profile.png">
                   </CardMedia>
                 </Grid>
                 <Grid item xs={12} sm={12} md={4} justify="center" alignItems="center">
