@@ -15,6 +15,8 @@ import { Projects } from '../shared/projects.js';
 import {skills} from '../shared/skills.js';
 import NavLink from './NavLink';
 import { contacts } from '../shared/contact.js';
+import { Experience } from '../shared/experience.js';
+
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -91,27 +93,19 @@ const useStyles = makeStyles((theme) => ({
   }
 
   const rows = [
-    createData('BTech CSE', 'KITs College of Engineering', 2021, 9.44, 'Autonomus'),
-    createData('Class 12', 'Vivekanad College Kolhapur', 2017, 81.08, 'Maharashtra State Board'),
-    createData('Class 10', 'Oriental English Academy', 2015, 90.60, 'Maharashtra State Board'),
+    createData('BTech CSE', 'KITs College of Engineering', 2021, 8.33, 'Autonomus'),
+    createData('Class 12', 'Shahu Dayanand Jr College', 2017, 81.08, 'Maharashtra State Board'),
+    createData('Class 10', 'Shree V.J. Deshmukh Highschool', 2015, 93.80, 'Maharashtra State Board'),
   ];
 
-  const achievements = [
-    "Shortlisted for the final round of InfyTQ-2020.",
-    "Successfully organized and managed Ebulieanza 2019 a Technical Event as technical cohead of the organizing committee under CSI at KITs College of Engineering.",
-    "Successfully organized a Coding Event as a Logistic member of ACSES Committee under Pioneer 2018",
-    "Secured Highest CGPA at my branch since 2nd Academic Year of my Engineering",
-    "Secured a SGPA of 10 in 5th Semester of my Engineering."
-  ]
-
   const extra = [
-    "Delivered a 45 minutes Online Session on “How to Implement Blockchain using Python” under Workshop organized by CSI Committee at KIT COEK.",
+    "Worked as Freelance Graphic Designer, animator and ui/ux designer for 3 year in multiple organizations with complete customer satisfaction.",
+"Photos published in college magazine.",
 "Successfully Completed the certification course at NPTEL on the topic “The joy of Computing using python”.",
-"Attended 2 Days workshop on Android Development organized by IIT Bombay titled as “Google Android Developers” in Dec 2018.",
 "Attended 2 Days workshop on “Machine learning and Artificial Intelligence using Python” organized by College of Engineering in 2017.",
 "Attended 1 Days workshop on Robotics organized by Robotics Club of KITCOEK.",
 "Completed 2 Courses namely:\n 1. Front-End Web UI Frameworks and Tools: Bootstrap 4\n 2. Front-End Web Development with React At Cousera under the course titled as “Full Stack Web Development”.",
-"Completed certification course title “Algorithmic Toolbox” at Coursera"
+"Attended 1 Day workshop on Video Editing in Adobe After Effects and Adobe Premier pro and VFX."
   ]
 function Main() {
     const classes = useStyles();
@@ -181,12 +175,12 @@ function Main() {
                 </Grid>
                 <Grid item xs={12} sm={12} md={4} justify="center" alignItems="center">
                   <Typography variant="h4" gutterBottom>Aditya Jadhav</Typography>
-                  <Typography mt={5} gutterBottom>8237342691</Typography>
+                  <Typography mt={5} gutterBottom>7057789800</Typography>
                   <Typography mt={5} gutterBottom>18adityajadhav@gmail.com</Typography>
                 </Grid >
                 <Grid item xs={12}>
                  
-                  <Typography style={{marginTop: 10},{fontStyle: 'italic'}}>
+                  <Typography style={{marginTop: 10}}>
                   A Final Year Computer Science Engineering Student who is keenly interested in Front end Development, 
                   Invovative mind wants to make a revolution in the fields of UI/UX.
                   </Typography>
@@ -194,7 +188,7 @@ function Main() {
               </Grid>
             </Card>
 
-            <Typography id="academics" className={classes.heading} variant="h4">Academics</Typography>
+            <Typography id="academics" className={classes.heading} style={{fontWeight: "bold" }} variant="h4">Academics</Typography>
             <Card className={classes.cardBg}>
               <Grid container>
                 <Grid item xs={12}>
@@ -202,11 +196,11 @@ function Main() {
                 <Table>
                   <TableHead >
                     <TableRow >
-                      <TableCell align="center" className={classes.head}>Course</TableCell>
-                      <TableCell align="center" className={classes.head}>University</TableCell>
-                      <TableCell align="center" className={classes.head}>Year</TableCell>
-                      <TableCell align="center" className={classes.head}>Score</TableCell>
-                      <TableCell align="center" className={classes.head}>Board</TableCell>
+                      <TableCell align="center" style={{color:'#F7BC55'}} className={classes.head}>Course</TableCell>
+                      <TableCell align="center" style={{color:'#F7BC55'}} className={classes.head}>University</TableCell>
+                      <TableCell align="center" style={{color:'#F7BC55'}} className={classes.head}>Year</TableCell>
+                      <TableCell align="center" style={{color:'#F7BC55'}} className={classes.head}>Score</TableCell>
+                      <TableCell align="center" style={{color:'#F7BC55'}} className={classes.head}>Board</TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>
@@ -228,24 +222,25 @@ function Main() {
               </Grid>
             </Card>
 
-            <Typography id="achievements" className={classes.heading} variant="h4">Achievements</Typography>
-            <Grid container>
-              <Grid item xs={12} md={12}>
-                <Card className={classes.cardBg} >
-                  <List>
-                  {achievements.map((text, index) => (
-                   
-                    <ListItem  key={index} activeClassName="Mui-selected">
-                       <ListItemIcon><PlayArrowIcon style={{fill:'#F7BC55'}}></PlayArrowIcon></ListItemIcon>
-                       <ListItemText primary={text} />
-                    </ListItem>
-                  ))}
-                  </List>
-              </Card>
-              </Grid>
-
-            </Grid>
-            <Typography id="extra" className={classes.heading} variant="h4">Extra Curicular Activities</Typography>
+            <Typography id="Experience" className={classes.heading} style={{fontWeight: "bold" }} variant="h4">Experience</Typography>
+            <Card className={classes.cardBg} >
+                  <Grid container spacing={2} justify="center" alignItems="center">
+                      {Experience.map((experience) =>(
+                        <Grid item xs={12} md={6}>
+                        <Card style={{background:"#F7BC55"}}>
+                          <CardContent>
+                      <Typography variant='h6' gutterBottom >Title: {experience.title}</Typography>
+                      <Typography paragraph>{experience.description}</Typography>
+                            
+                          </CardContent>
+                        </Card>
+                        </Grid>
+                      ))}
+                    
+                  </Grid>
+            </Card>
+            
+            <Typography id="extra" className={classes.heading} style={{fontWeight: "bold" }} variant="h4">Extra Curricular Activities</Typography>
             <Grid container>
               <Grid item xs={12} md={12}>
                 <Card className={classes.cardBg} >
@@ -261,18 +256,19 @@ function Main() {
               </Card>
               </Grid>
             </Grid>
-            <Typography id="Projects" className={classes.heading} variant="h4">Projects</Typography>
+
+            <Typography id="Projects" className={classes.heading} style={{fontWeight: "bold" }} variant="h4">Projects</Typography>
             <Card className={classes.cardBg} >
                   <Grid container spacing={2} justify="center" alignItems="center">
                     
                       {Projects.map((project) =>(
                         <Grid item xs={12} md={6}>
-                        <Card>
+                        <Card >
                           <CardContent>
                       <Typography variant='h6' gutterBottom>Title: {project.title}</Typography>
                       <Typography paragraph>{project.description}</Typography>
                             <CardActions>
-                               <Button>Learn More</Button>
+                               <Button style={{background:'#F7BC55'}} href={project.link} target ="_blank" capta ><Typography style={{textTransform: 'capitalize'}}>Learn More</Typography></Button>
                              </CardActions>
                           </CardContent>
                         </Card>
@@ -281,35 +277,56 @@ function Main() {
                     
                   </Grid>
             </Card>
-          
-          <Typography id="skills" className={classes.heading} variant="h4">Skills</Typography>
-          <Card className={classes.cardBg}>
-            <Grid container>
-              {
-                skills.map((name) => (
-                  <Grid item xs={6} sm={4} md={3} gutterBottom mt={10}>
-                    <img src={name} alt=""/>
+
+            <Typography id="skills" className={classes.heading} style={{fontWeight: "bold" }} variant="h4">Skills</Typography>
+            <Card className={classes.cardBg} >
+                  <Grid container spacing={2} justify="center" alignItems="center">
+                    
+                      {skills.map((skl) =>(
+                        <Grid item xs={6} sm={4} md={3} gutterBottom >
+                        <Card  >
+                          <CardContent align='center'>
+                         
+                    <img style={{height:'100px'}} src={skl.icon} alt=""/>
+                  
+                      <Typography variant="h6" style={{fontWeight: "bold" }}>{skl.name}</Typography>
+                            
+                          </CardContent>
+                        </Card>
+                        </Grid>
+                      ))}
+                    
                   </Grid>
-                ))
-              }
-             
-            </Grid>
-          </Card>
-          <Typography id="contact" className={classes.heading} variant="h4">Contact</Typography>
-          <Card className={classes.cardBg}>
-            <Grid container>
-              {contacts.map((c) =>(
-                <Grid item xs={6} sm={4} md={3}>
-                  <IconButton href={c.link}>
-                  <img src={c.icon} alt=""/>
-                  </IconButton>
-                </Grid>
-              ))}
-            </Grid>
-          </Card>
+            </Card>
+
+            <Typography id="contact" className={classes.heading} style={{fontWeight: "bold" }} variant="h4">Contact</Typography>
+            <Card className={classes.cardBg} >
+                  <Grid container spacing={10} justify="center" alignItems="center">
+                    
+                      {contacts.map((cnt) =>(
+                        <Grid item xs={6} sm={4} md={3} gutterBottom >
+                        <Card  >
+                          <CardContent align='center'>
+                         
+                          <IconButton href={cnt.link}>
+
+                          <img style={{height:'50px'}} src={cnt.icon} alt=""/>
+                          
+                          </IconButton>
+                            
+                          </CardContent>
+                        </Card>
+                        </Grid>
+                      ))}
+                    
+                  </Grid>
+            </Card>
+
+         
+          
           <Typography className={classes.heading} variant="h4"></Typography>
-          <Card >
-            This site is developed by Ajey
+          <Card style={{background:"#242635"}}>
+            <Typography style={{color:"white"}}> © This site is developed by Vageshwar Yadav and Aditya Jadhav.</Typography>
           </Card>
         </main>
       </div>
